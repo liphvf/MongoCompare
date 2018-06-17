@@ -23,14 +23,14 @@ def Insert():
         inicio = datetime.datetime.now()
         col.insert_one(reg)
         fim = datetime.datetime.now()
-        RegistrarLog(inicio, fim, "", "Insert")
+        RegistrarLog(inicio, fim, item, "Insert")
 
 def Find():
     for codigo in CodigosUsados:
         inicio = datetime.datetime.now()
         col.find_one({"Codigo": codigo})
         fim = datetime.datetime.now()
-        RegistrarLog(inicio, fim, "", "Find")
+        RegistrarLog(inicio, fim, codigo, "Find")
 
 
 def Update():
@@ -38,7 +38,7 @@ def Update():
         inicio = datetime.datetime.now()
         col.update_one({"Codigo": codigo}, {"$set":{"Nome":"Alterado"}})
         fim = datetime.datetime.now()
-        RegistrarLog(inicio, fim, "", "Update")
+        RegistrarLog(inicio, fim, codigo, "Update")
 
 
 
@@ -54,14 +54,13 @@ def Delete():
 def RegistrarLog(inicio, fim, msg, operation):
     diff = fim - inicio
     timeDifference = float(diff.total_seconds()) * 1000
-    # print(timeDifference)
 
     client.Log.Python.insert_one({
         "Start": inicio,
         "End": fim,
         "TimeDifference": timeDifference,
         "Msg": msg,
-        "operation": operation
+        "Operation": operation
     })
 
 
