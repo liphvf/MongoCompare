@@ -29,33 +29,11 @@ namespace M101N
                 .CreateLogger<Program>();
             logger.LogDebug("Starting application");
 
-            //do the actual work here
-            // var bar = serviceProvider.GetService<IBarService>();
-            // bar.DoSomeRealWork();
-
             logger.LogDebug("All done!");
 
             var test = serviceProvider.GetService<Test>();
 
             test.PrimeiraBateria().GetAwaiter().GetResult();
-
         }
-        // static void Main(string[] args)
-        // {
-        //     MainAsync(args).GetAwaiter().GetResult();
-        //     Console.WriteLine();
-        //     Console.WriteLine("Precisone enter");
-        //     Console.WriteLine();
-
-        // }
-        // static async Task MainAsync(string[] args)
-        // {
-        //     var connectionString = "mongodb://localhost:27017";
-        //     var client = new MongoClient(connectionString);
-        //     var db = client.GetDatabase("dotnet");
-        //     var col = db.GetCollection<BsonDocument>("people");
-
-
-        // }
     }
 }
