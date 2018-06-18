@@ -13,7 +13,7 @@ O objetivo deste trabalho é realizar uma análise comparativa de desempenho das
 ## Arquitetura do ambiente
 
 *   Processador: Ryzen 1800x
-*   Memória: 16G 300mhz
+*   Memória: 16G 3000mhz
 *   Sistema Operacional: Windows 10
 *   Disco: SSD Samsung EVO 750
 
