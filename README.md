@@ -34,4 +34,9 @@ Será utilizado o drive padrão fornecido pela documentação do [MongoDB](https
 Será utilizado o drive padrão fornecido pela documentação do [MongoDB](https://api.mongodb.com/python/current/)
 
 ## Análise dos Resultados
-Os dados gerados serão armazedos em uma outra collection no MongoDB para análise posterior. Após análise dos dados, foi constatado que o Python mantem regulariedade nos dados de coletados variando de 899 nanosegundos à 1.2 millesegoundo em operações de insert, enquanto o C# tende a variar esses números entre 0.15 millesegundos e 0.17 milesegundos.
+Os dados gerados serão armazedos em uma outra collection no MongoDB para análise posterior. Após análise dos dados, foi constatado que o Python mantem regulariedade nos dados de coletados variando de 899 nanosegundos à 1.2 millesegoundo em operações de insert, enquanto o C# tende a variar esses números entre 0.15 millesegundos e 0.17 milesegundos. No PowerPoint presente neste repositório será possível visualizar todos os gráficos dos testes realizardos com mil iterações.
+
+# Downloads:
+- [Apresentação](https://github.com/liphvf/MongoCompare/blob/master/Analise.pptx?raw=true)
+- [Dados do C#](https://github.com/liphvf/MongoCompare/blob/master/CSVs/ResultadoFinalCsharp.xlsx?raw=true)
+- [Dados do Python](https://github.com/liphvf/MongoCompare/blob/master/CSVs/ResultadoFinalPython.xlsx?raw=true)
